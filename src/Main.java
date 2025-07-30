@@ -9,6 +9,9 @@ public class Main {
         int opcao;
 
         do {
+            System.out.println("\n************************************************************");
+            System.out.println("********************** MENU ********************************");
+            System.out.println("************************************************************\n");
             System.out.println("Escolha uma das opções abaixo:");
             System.out.println("1 - Cadastrar Produto");
             System.out.println("2 - Listar Produtos");
