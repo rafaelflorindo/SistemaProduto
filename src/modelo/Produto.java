@@ -9,13 +9,16 @@ public class Produto {
     public boolean status = true;
 
     public void cadastrarProduto(Scanner scan){
-        Scanner scan = new Scanner(System.in);
         System.out.println("Informe os dados para o cadastro do produto.");
-        System.out.println("Codigo: ");   this.codigo = scan.nextInt();
+        System.out.println("Codigo: ");
+        this.codigo = scan.nextInt();
         scan.nextLine(); //limpar buffer
-        System.out.println("Nome: ");   this.nome = scan.nextLine();
-        System.out.println("Quantidade: ");   this.quantidadeEstoque = scan.nextInt();
-        System.out.println("Preço: ");  this.preco = scan.nextDouble();
+        System.out.println("Nome: ");
+        this.nome = scan.nextLine();
+        System.out.println("Quantidade: ");
+        this.quantidadeEstoque = scan.nextInt();
+        System.out.println("Preço: ");
+        this.preco = scan.nextDouble();
     }
 
     public void alterarStatus(boolean estado){
@@ -36,9 +39,10 @@ public class Produto {
         System.out.println(">> Listando Produto Cadastrado <<");
         System.out.println("Código: " + this.codigo);
         System.out.println("Nome: " + this.nome);
-        System.out.println("Preço: R$ " + this.preco);
+        //System.out.println("Preço: R$ " + this.preco);
+        System.out.println("Preço: R$ " + String.format("%.2f", this.preco));
         System.out.println("Quantidade em estoque: " + this.quantidadeEstoque);
-        System.out.println("Total: R$ " + calcularValorProdutoEstoque());
+        System.out.println("Total: R$ " + String.format("%.2f", calcularValorProdutoEstoque()));
 
         if(this.status == true) {
             System.out.println("Produto ativo");
